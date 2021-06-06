@@ -1,5 +1,7 @@
 package com.dunzo.beveragemachine.components;
-
+/*
+Defines the work that needs to be done while making the beverage
+ */
 public class BeverageMaker implements Runnable {
 
     String beverageName;

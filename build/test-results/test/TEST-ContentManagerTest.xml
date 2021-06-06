@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ContentManagerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-06-06T11:35:13" hostname="DESKTOP-SLFOJ9T" time="0.209">
+  <properties/>
+  <testcase name="willReturnUNAVAILABLEIfIngredientNotPresentAtAll" classname="ContentManagerTest" time="0.16"/>
+  <testcase name="willReturnINSUFFICIENTIfContentISPresentButLess" classname="ContentManagerTest" time="0.003"/>
+  <testcase name="canFillMachineWIthIngredient" classname="ContentManagerTest" time="0.009"/>
+  <testcase name="willReturnAVAILABLEIfContentIsEnough" classname="ContentManagerTest" time="0.004"/>
+  <testcase name="willNotReturnBeverageEvenIfOneIngredientIsUNAVAILABLE" classname="ContentManagerTest" time="0.025"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

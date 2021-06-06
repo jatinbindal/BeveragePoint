@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/*
+
+ * Manages contents for the machine
+ * has methods to remove/add contents
+ * has methods to get contents for a beverage syncronously and subtract the quantity from the machine's content store
+
+ */
+
 public class ContentManager {
 
     //contents and their quantities present in the machine

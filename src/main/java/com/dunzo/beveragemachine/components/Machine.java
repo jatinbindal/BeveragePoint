@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 import java.util.Map;
 
+
 @JsonTypeInfo(include = JsonTypeInfo.As.WRAPPER_OBJECT, use = JsonTypeInfo.Id.NAME)
 @JsonTypeName(value = "machine")
 public class Machine {
@@ -14,10 +15,10 @@ public class Machine {
     private final ContentManager contentManager = new ContentManager();
     private final BeverageMakerWorkers beverageMakerThreadPool;
 
-    public Machine(@JsonProperty("outlets") Map<String, Integer> outlet,
+    public Machine(@JsonProperty("outlets") Map<String, Integer> outlets,
                    @JsonProperty("total_items_quantity") Map<String, Integer> items,
                    @JsonProperty("beverages") Map<String, Map<String, Integer>> beverages) {
-        this.numberOfOutlets = outlet.get("count_n");
+        this.numberOfOutlets = outlets.get("count_n");
         this.contentManager.addBeverages(beverages);
         this.contentManager.addContents(items);
         this.beverageMakerThreadPool = new BeverageMakerWorkers(numberOfOutlets);
