@@ -13,7 +13,7 @@ public class Machine {
     @JsonProperty("outlets")
     private final int numberOfOutlets;
     private final ContentManager contentManager = new ContentManager();
-    private final BeverageMakerWorkers beverageMakerThreadPool;
+    private final BeverageMakerWorkersManager beverageMakerThreadPool;
 
     public Machine(@JsonProperty("outlets") Map<String, Integer> outlets,
                    @JsonProperty("total_items_quantity") Map<String, Integer> items,
@@ -21,7 +21,7 @@ public class Machine {
         this.numberOfOutlets = outlets.get("count_n");
         this.contentManager.addBeverages(beverages);
         this.contentManager.addContents(items);
-        this.beverageMakerThreadPool = new BeverageMakerWorkers(numberOfOutlets);
+        this.beverageMakerThreadPool = new BeverageMakerWorkersManager(numberOfOutlets);
     }
 
     public int getNumberOfOutlets() {
@@ -32,7 +32,7 @@ public class Machine {
         return contentManager;
     }
 
-    public BeverageMakerWorkers getBeverageMakerThreadPool() {
+    public BeverageMakerWorkersManager getBeverageMakerThreadPool() {
         return beverageMakerThreadPool;
     }
 

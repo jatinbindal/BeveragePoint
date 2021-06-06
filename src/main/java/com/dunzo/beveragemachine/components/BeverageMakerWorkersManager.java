@@ -6,11 +6,11 @@ import java.util.concurrent.Executors;
 /*
 Manages threads for making beverages. No of threads = no of outlets
  */
-public class BeverageMakerWorkers {
+public class BeverageMakerWorkersManager {
 
     private final ExecutorService workers;
 
-    public BeverageMakerWorkers(int n) {
+    public BeverageMakerWorkersManager(int n) {
         this.workers = Executors.newFixedThreadPool(n);
     }
 

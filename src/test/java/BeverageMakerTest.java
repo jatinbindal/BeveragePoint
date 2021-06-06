@@ -1,4 +1,4 @@
-import com.dunzo.beveragemachine.components.BeverageMakerWorkers;
+import com.dunzo.beveragemachine.components.BeverageMakerWorkersManager;
 import com.dunzo.beveragemachine.components.Machine;
 import com.dunzo.beveragemachine.utils.Utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,7 +21,7 @@ public class BeverageMakerTest {
     @Test
     public void willMakeBeverages() {
 
-        BeverageMakerWorkers workers = machine.getBeverageMakerThreadPool();
+        BeverageMakerWorkersManager workers = machine.getBeverageMakerThreadPool();
         workers.makeBeverage("hot_tea", machine.getContentManager());
         workers.makeBeverage("hot_coffee", machine.getContentManager());
         workers.makeBeverage("black_tea", machine.getContentManager());
